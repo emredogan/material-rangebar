@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.emredogan.sliders.MainActivity">
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar_id"
+        android:layout_margin="30dp"
+        android:isScrollContainer="true"
+        android:max="100"
+        android:theme="@style/seekbarTheme"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textSeekbar"
+        android:text="App Compact Seekbar"
+        android:textStyle="bold"
+        android:layout_below="@id/seekbar_id"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/value"
+        android:text="0"
+        android:layout_toRightOf="@id/textSeekbar"
+        android:layout_alignBaseline="@id/textSeekbar"
+        android:layout_marginLeft="10dp"
+/>
+    <com.appyvet.materialrangebar.RangeBar
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:id="@+id/rangeBar1_id"
+        android:layout_below="@id/textSeekbar"
+        app:mrb_rangeBar="false"
+        app:mrb_tickStart="1"
+        app:mrb_tickEnd="20"
+        app:mrb_tickInterval="1"
+        app:mrb_pinRadius="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rangebar1txt"
+        android:text="Range Bar: "
+        android:textStyle="bold"
+        android:layout_below="@id/rangeBar1_id"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rangebar1_value"
+        android:text="0"
+        android:layout_below="@id/rangebar1txt"
+        android:layout_marginLeft="30dp"/>
+    
+    <com.appyvet.materialrangebar.RangeBar
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:id="@+id/rangebar2"
+        android:layout_below="@id/rangebar1txt"
+        android:layout_margin="30dp"
+        app:mrb_rangeBar="true"
+        app:mrb_tickStart="10"
+        app:mrb_tickEnd="20"
+        app:mrb_tickInterval="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rangebar2_txt"
+        android:text="Range Bar: "
+        android:textStyle="bold"
+        android:layout_below="@id/rangebar2"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rangebar2_leftvalue"
+        android:text="0"
+        android:layout_below="@id/rangebar2_txt"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rangebar2_rightvalue"
+        android:text="0"
+        android:layout_below="@id/rangebar2_leftvalue"
+        android:layout_marginLeft="30dp"/>
+</RelativeLayout>
